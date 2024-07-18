@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Search_thesis</class>
+ <widget class="QDialog" name="Search_thesis">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1064</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Search_thesis</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon.jpg</normaloff>icon.jpg</iconset>
+  </property>
+  <widget class="QPushButton" name="search_button">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>80</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>검색</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="input_line">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>20</y>
+     <width>351</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>맑은 고딕</family>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="excel_button">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>530</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>엑셀로 변환</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="move_button">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>460</y>
+     <width>171</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>논문으로 이동하기</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="output_list">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>200</y>
+     <width>741</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+  </widget>
+  <widget class="QSlider" name="slider">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>90</y>
+     <width>351</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>100</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="tickPosition">
+    <enum>QSlider::NoTicks</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="input_botton">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>20</y>
+     <width>131</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>주제 입력</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="recent_label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>130</y>
+     <width>751</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>맑은 고딕</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>현재값 : </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="max_label">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>160</y>
+     <width>751</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>맑은 고딕</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>최댓값 : </string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>search_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Search_thesis</receiver>
+   <slot>research()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>610</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>775</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>excel_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Search_thesis</receiver>
+   <slot>making_excel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1003</x>
+     <y>537</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>976</x>
+     <y>598</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>move_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Search_thesis</receiver>
+   <slot>join_link()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1041</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>938</x>
+     <y>442</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>input_botton</sender>
+   <signal>clicked()</signal>
+   <receiver>Search_thesis</receiver>
+   <slot>get_subject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>528</x>
+     <y>32</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>474</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>Search_thesis</receiver>
+   <slot>recent_signal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>106</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>186</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>output_list</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>Search_thesis</receiver>
+   <slot>selected_box()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>558</x>
+     <y>337</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>920</x>
+     <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>research()</slot>
+  <slot>making_excel()</slot>
+  <slot>join_link()</slot>
+  <slot>get_subject()</slot>
+  <slot>recent_signal()</slot>
+  <slot>selected_box()</slot>
+ </slots>
+</ui>
